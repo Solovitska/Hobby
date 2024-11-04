@@ -23,33 +23,49 @@
 </head>
 <body>
     <h1 class="visually-hidden">handmade</h1>
-    <load src="./partials/header/header.html"></load>
+    <div id="header"></div>
 
     <div class="wrapper">
         <main>
-            <load src="./partials/hero/hero.html"></load>
-            <load src="./partials/about/about.html"></load>
-            <load src="./partials/advantages/advantages.html"></load>
-            <load src="./partials/upcoming-tours/upcoming-tours.html"></load>
-            <load src="./partials/reviews/reviews.html"></load>
-            <load src="./partials/gallery/gallery.html"></load>
-            <load src="./partials/form-section/form-section.html"></load>
+            <div id="hero"></div>
+            <div id="about"></div>
+            <div id="advantages"></div>
+            <div id="upcoming-tours"></div>
+            <div id="reviews"></div>
+            <div id="gallery"></div>
+            <div id="form-section"></div>
         </main>
     </div>
 
-    <load src="./partials/footer/footer.html"></load>
+    <div id="footer"></div>
 
     <!-- Modals -->
-    <load src="./partials/modal/book-a-tour.html"></load>
-    <load src="./partials/modal/tour-1.html"></load>
-    <load src="./partials/modal/tour-2.html"></load>
-    <load src="./partials/modal/tour-3.html"></load>
-    <load src="./partials/scroll-to-top/scroll-to-top.html"></load>
+    <div id="modal-book-a-tour"></div>
+    <div id="modal-tour-1"></div>
+    <div id="modal-tour-2"></div>
+    <div id="modal-tour-3"></div>
+    <div id="scroll-to-top"></div>
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/notiflix/dist/notiflix-3.2.5.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        $(document).ready(function() {
+            // Завантаження частин
+            $("#header").load("./partials/header/header.html");
+            $("#hero").load("./partials/hero/hero.html");
+            $("#about").load("./partials/about/about.html");
+            $("#advantages").load("./partials/advantages/advantages.html");
+            $("#upcoming-tours").load("./partials/upcoming-tours/upcoming-tours.html");
+            $("#reviews").load("./partials/reviews/reviews.html");
+            $("#gallery").load("./partials/gallery/gallery.html");
+            $("#form-section").load("./partials/form-section/form-section.html");
+            $("#footer").load("./partials/footer/footer.html");
+            $("#modal-book-a-tour").load("./partials/modal/book-a-tour.html");
+            $("#modal-tour-1").load("./partials/modal/tour-1.html");
+            $("#modal-tour-2").load("./partials/modal/tour-2.html");
+            $("#modal-tour-3").load("./partials/modal/tour-3.html");
+            $("#scroll-to-top").load("./partials/scroll-to-top/scroll-to-top.html");
+
             Notiflix.Notify.init({
                 position: 'center-top',
             });
