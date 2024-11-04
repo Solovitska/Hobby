@@ -1,7 +1,7 @@
-import './js/aos' 
+import './js/aos'
 import '@splidejs/splide/css';
 // import './js/toasts';
-//inits
+
 import './js/scroll';
 //
 import './js/fancybox-modal';

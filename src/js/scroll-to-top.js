@@ -1,22 +1,24 @@
-const arrow = document.querySelector('[data-scroll-to-top]');
+document.addEventListener('DOMContentLoaded', () => {
+  const arrow = document.querySelector('[data-scroll-to-top]');
 
+  if (arrow) {
+      const amountScrolled = 200;
 
-const amountScrolled = 200;
+      function handleClick() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
 
-function handleClick() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+      function handleScroll(e) {
+          if (this.scrollY > amountScrolled) {
+              arrow.classList.add('visible');
+              arrow.addEventListener('click', handleClick);
+          } else {
+              arrow.classList.remove('visible');
+              arrow.removeEventListener('click', handleClick);
+          }
+      }
 
-function handleScroll(e) {
-  if (this.scrollY > amountScrolled) {
-    arrow.classList.add('visible');
-    arrow.addEventListener('click', handleClick);
-  } else {
-    arrow.classList.remove('visible');
-    arrow.removeEventListener('click', handleClick);
+      window.addEventListener('scroll', handleScroll);
+      arrow.addEventListener('click', handleClick);
   }
-}
-
-
-window.addEventListener('scroll', handleScroll);
-arrow.addEventListener('click', handleClick);
+});
