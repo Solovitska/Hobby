@@ -1,21 +1,113 @@
 .footer {
-  padding: 20px 0;
-}
-.footer-desc {
-  text-align: center;
-}
-.footer-link {
+  padding: 40px 44px 102px 44px;
+  gap: 28px;
+  background-color: #202321;
+  color: var(--LightText);
+overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
   position: relative;
 }
-.footer-link::before {
-  content: '';
+.footer-title {
+  font-size: 28px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.list-value {
+  font-size: 16px;
+  font-weight: 400;
+}
+.socials-icon {
+  width: 32px;
+  height: 32px;
+  fill: currentColor;
+}
+
+.footer_list {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer_list-items > a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  transition: transform var(--base-transition);
+}
+
+.footer_list-items:not(:last-child):is(:hover, :focus) > a {
+  transform: scale(1.05);
+}
+
+.footer-icons-bar {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+.bottom-icons {
+  width: 40px;
+  height: 40px;
+  transition: transform var(--base-transition);
+}
+.bottom-icons:is(:focus, :hover) {
+  transform: scale(1.2);
+}
+
+.footer-license {
+  color: #a3a5a3;
+  font-size: 16px;
+  font-weight: 400;
   position: absolute;
-  bottom: 6%;
-  left: 50%;
-  transform: translateX(-50%) skewX(-12deg);
-  z-index: -1;
-  width: 110%;
-  height: 24%;
-  background-color: #41d1ff;
-  transition: 200ms ease;
+  bottom: 40px;
+
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 64px 100px 125px 100px;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 137px;
+  }
+  .footer-title {
+    font-size: 32px;
+  }
+  .list-value {font-size: 18px;}
+  .footer_list {
+    gap: 40px;
+  }
+  .footer-license{
+    bottom: 63px;
+    left: auto;
+
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .footer {
+    padding: 60px 0 134px 0;
+    align-items: baseline;
+    gap: 128px;
+  }
+  .footer-title {
+    font-size: 60px;
+  }
+  .list-value {
+    font-size: 24px;
+  }
+  .footer_list {
+    gap: 51px;
+  }
+  .footer-license {
+    bottom: 48px;
+
+  }
 }

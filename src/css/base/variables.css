@@ -1,0 +1,28 @@
+:root {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px; /* Збільшено базовий шрифт для кращої читабельності */
+  line-height: 1.5; /* Підвищено міжрядковий інтервал для комфортності */
+  font-weight: 400;
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --light-text: #f7fbfb; /* Змінено на camelCase для узгодженості */
+  --primary-text: #1b1d1b;
+  --secondary-text: #202321;
+  --accent-color: #009688;
+  --base-transition: 0.3s ease; /* Змінено на сучасніший ease для анімацій */
+  --desktop: 1440px;
+  --tablet: 768px;
+  --mobile: 375px;
+
+  --background-color: #f9f9f9; /* Додано змінну для фону */
+  --border-color: #e0e0e0; /* Додано змінну для кольору межі */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Додано змінну для тіні */
+}
+
+

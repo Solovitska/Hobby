@@ -1,0 +1,132 @@
+.hero {
+  background: linear-gradient(
+      rgba(86, 85, 84, 0.8),
+      rgba(86, 85, 84, 0.8)
+    ),
+    url('../img/photos/hero/hero_desk_1920hero-mob.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 188px 30px 193px 30px;
+  z-index: -1;
+  transition: background 0.5s ease-in-out; 
+}
+
+.hero-title-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.hero-title {
+  width: 335px;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.22;
+  letter-spacing: -0.03em;
+  margin-bottom: 80px;
+  color: #f9fcfd;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Додати тінь для тексту */
+}
+
+.hero-title-span {
+  color: #009688;
+}
+
+.hero-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+  opacity: 1;
+  transition: opacity 0.5s ease; /* Змінити анімацію opacity */
+}
+
+.hero-box.active {
+  opacity: 0;
+}
+
+.hero-subtitle {
+  margin-bottom: 88px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  color: rgba(255, 255, 255, 0.8); /* Легка прозорість для підзаголовка */
+}
+
+/* Медіа-запити для адаптивного дизайну */
+@media screen and (min-width: 375px) and (max-width: 768px) {
+  .hero-box {
+    max-width: 375px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: url('../img/photos/hero/hero_desk_1920hero-dsk@2x.jpg');
+    padding: 180px 20px 185px 20px;
+    height: auto;
+  }
+
+  .hero-box {
+    max-width: 768px;
+  }
+
+  .hero-title {
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
+
+  .hero-subtitle {
+    font-size: 20px;
+    max-width: 470px;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero {
+    background-image: url('../img/photos/hero/hero_desk_1920hero-dsk.jpg');
+    height: 975px;
+    padding: 258px 0 266px 0;
+  }
+
+  .hero-box {
+    max-width: 1170px;
+  }
+
+  .hero-title {
+    font-size: 58px;
+    font-weight: 400;
+  }
+
+  .hero-subtitle {
+    width: 675px;
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url('../img/photos/hero/hero_desk_1920hero-mob.jpg');
+  }
+}
+
+@media screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero {
+    background-image: url('../img/photos/hero/hero_desk_1920hero-dsk@2x.jpg');
+  }
+}
+
+@media screen and (min-resolution: 2dppx) and (min-width: 1440px) {
+  .hero {
+    background-image: url('../img/photos/hero/hero_desk_1920hero-dsk1.jpg');
+  }
+}

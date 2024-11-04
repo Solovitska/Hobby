@@ -17,6 +17,12 @@
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "@fancyapps/ui": "^5.0.36",
+    "@splidejs/splide": "^4.1.4",
+    "aos": "^2.3.4",
+    "jquery": "^3.7.1",
+    "notiflix": "^3.2.7",
+    "slick-carousel": "^1.8.1",
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-html-inject": "^1.1.2"
   }
